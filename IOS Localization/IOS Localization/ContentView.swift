@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var languages = Language.allCases
+    @State private var selectedLanguage: Language = .english
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            HStack(alignment: .center) {
+                Text("Select language")
+                Picker("Choose your language", selection: $selectedLanguage) {
+                    ForEach(languages, id: \.self) { content in
+                        Text(content.rawValue)
+                    }
+                }
+            }
+            
+            Text("Hi! How are you?")
         }
         .padding()
     }

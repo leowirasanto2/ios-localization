@@ -14,6 +14,7 @@
 		609EBBCB2C3297ED00C70B6E /* IOS_LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBCA2C3297ED00C70B6E /* IOS_LocalizationTests.swift */; };
 		609EBBD52C3297ED00C70B6E /* IOS_LocalizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBD42C3297ED00C70B6E /* IOS_LocalizationUITests.swift */; };
 		609EBBD72C3297ED00C70B6E /* IOS_LocalizationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBD62C3297ED00C70B6E /* IOS_LocalizationUITestsLaunchTests.swift */; };
+		609EBBE42C32989500C70B6E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBE32C32989500C70B6E /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		609EBBD02C3297ED00C70B6E /* IOS LocalizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS LocalizationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		609EBBD42C3297ED00C70B6E /* IOS_LocalizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_LocalizationUITests.swift; sourceTree = "<group>"; };
 		609EBBD62C3297ED00C70B6E /* IOS_LocalizationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_LocalizationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		609EBBE32C32989500C70B6E /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +97,13 @@
 		609EBBB72C3297EB00C70B6E /* IOS Localization */ = {
 			isa = PBXGroup;
 			children = (
+				609EBBE52C329D0300C70B6E /* Resources */,
 				609EBBB82C3297EB00C70B6E /* IOS_LocalizationApp.swift */,
 				609EBBBA2C3297EB00C70B6E /* ContentView.swift */,
 				609EBBBC2C3297EC00C70B6E /* Assets.xcassets */,
 				609EBBBE2C3297EC00C70B6E /* IOS_Localization.entitlements */,
 				609EBBBF2C3297EC00C70B6E /* Preview Content */,
+				609EBBE32C32989500C70B6E /* Language.swift */,
 			);
 			path = "IOS Localization";
 			sourceTree = "<group>";
@@ -127,6 +131,13 @@
 				609EBBD62C3297ED00C70B6E /* IOS_LocalizationUITestsLaunchTests.swift */,
 			);
 			path = "IOS LocalizationUITests";
+			sourceTree = "<group>";
+		};
+		609EBBE52C329D0300C70B6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				609EBBBB2C3297EB00C70B6E /* ContentView.swift in Sources */,
 				609EBBB92C3297EB00C70B6E /* IOS_LocalizationApp.swift in Sources */,
+				609EBBE42C32989500C70B6E /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +436,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -432,8 +445,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -442,10 +455,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "leowirasanto.IOS-Localization";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,6 +476,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -470,8 +485,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -480,10 +495,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "leowirasanto.IOS-Localization";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
