@@ -8,7 +8,23 @@
 import Foundation
 
 enum Language: String, CaseIterable {
-    case english = "English"
-    case indonesian = "Indonesian"
-    case spainish = "Spainish"
+    case english = "en_US"
+    case indonesian = "id_ID"
+    case spainish = "es_ID"
+    
+    var description: String {
+        switch self {
+        case .english:
+            return "English (US)"
+        case .indonesian:
+            return "Bahasa Indonesia"
+        case .spainish:
+            return "Spainish"
+        }
+    }
+    
+    static func currentLanguage() -> Language {
+        let code = Locale.current.identifier
+        return Language(rawValue: code) ?? .english
+    }
 }

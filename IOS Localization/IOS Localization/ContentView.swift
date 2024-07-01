@@ -12,18 +12,13 @@ struct ContentView: View {
     @State private var selectedLanguage: Language = .english
     
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             
-            HStack(alignment: .center) {
-                Text("Select language")
-                Picker("Choose your language", selection: $selectedLanguage) {
-                    ForEach(languages, id: \.self) { content in
-                        Text(content.rawValue)
-                    }
-                }
-            }
+            Text("Current language: \(Language.currentLanguage().description)")
+                .font(.headline)
             
-            Text("Hi! How are you?")
+            Text("hi_how_are_you_text".localized)
+                .font(.title)
         }
         .padding()
     }

@@ -16,6 +16,7 @@
 		609EBBD72C3297ED00C70B6E /* IOS_LocalizationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBD62C3297ED00C70B6E /* IOS_LocalizationUITestsLaunchTests.swift */; };
 		609EBBE42C32989500C70B6E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBE32C32989500C70B6E /* Language.swift */; };
 		609EBBE82C329E3100C70B6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 609EBBE62C329E3100C70B6E /* Localizable.strings */; };
+		609EBBEC2C329F6400C70B6E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609EBBEB2C329F6400C70B6E /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		609EBBE72C329E3100C70B6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		609EBBE92C329E7900C70B6E /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		609EBBEA2C329E7D00C70B6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		609EBBEB2C329F6400C70B6E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				609EBBBE2C3297EC00C70B6E /* IOS_Localization.entitlements */,
 				609EBBBF2C3297EC00C70B6E /* Preview Content */,
 				609EBBE32C32989500C70B6E /* Language.swift */,
+				609EBBEB2C329F6400C70B6E /* StringExtension.swift */,
 			);
 			path = "IOS Localization";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609EBBEC2C329F6400C70B6E /* StringExtension.swift in Sources */,
 				609EBBBB2C3297EB00C70B6E /* ContentView.swift in Sources */,
 				609EBBB92C3297EB00C70B6E /* IOS_LocalizationApp.swift in Sources */,
 				609EBBE42C32989500C70B6E /* Language.swift in Sources */,
