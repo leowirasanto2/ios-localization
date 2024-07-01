@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  IOS Localization
+
+  Created by Leo Wirasanto Laia on 01/07/24.
+  
+*/
+
+"hi_how_are_you_text" = "¡Hola! ¿Cómo estás?";
+"im_fine_thanks_text" = "¡Estoy bien gracias!";
+"what_is_your_name_text" = "¿Cómo te llamas?";
